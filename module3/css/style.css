@@ -1,7 +1,12 @@
 
-body {
-	font-size: 16px;
+body {	
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.row {
+	font-size: 100%;
+	margin: 0 20px 50px 20px;
+
 }
 
 h1 {
@@ -10,7 +15,7 @@ h1 {
 	text-shadow: 1px 1px 1px #bbb;
 	margin-top: 0;
 	margin-bottom: 0;
-	line-height: .75;
+	line-height: .75;	
 }
 
 h2 {	
@@ -36,8 +41,10 @@ h3 {
 		background-color: #d0d0d0;
 		color: #333;
 		font-size: 1.8em;
-		text-align: center;
-		border-bottom: 1px solid #c3c3c3;;
+		text-align: center;		
+	}
+	#main-menu li {
+		border-bottom: 1px solid #c3c3c3;
 	}	
 
 	#main-menu li:last-child {
