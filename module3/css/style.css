@@ -6,7 +6,7 @@ body {
 .row  section{
 	height: 700px;
 	font-size: 1.1em;
-	background-color: #c1c0c0;
+	background-color: #FDEAA8;
 	padding: 15px;
 	margin-bottom: 30px;
 }
@@ -14,7 +14,7 @@ body {
 h1 {
 	font-size: 1.5em;	
 	font-weight: bold;
-	text-shadow: 1px 1px 1px #bbb;
+	text-shadow: 2px 2px 4px #911E42;
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: .75;	
@@ -22,12 +22,36 @@ h1 {
 
 h2 {	
 	margin-bottom: 40px;
+	font-size: 3em;
+	font-weight: bolder;
 }
 
 h3 {
 	margin-bottom: 20px;
+	color: #FF5300;
+	font-weight: bold;
 }
 
+.navbar-default {
+	background-color: #808000;
+}
+
+.navbar-default .navbar-brand {
+	color: #FDEAA8;
+}
+
+.navbar-default .navbar-toggle {
+	background-color: #FDEAA8;
+	border-color: #911E42;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #911E42;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #911E42;
+}
 
 
 
@@ -36,7 +60,7 @@ h3 {
 
 @media(max-width: 767px){
 	#main-menu{
-		background-color: #d0d0d0;
+		background-color: #FDEAA8;
 		color: #333;
 		font-size: 1.8em;
 		text-align: center;		
