@@ -3,10 +3,12 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.row {
-	font-size: 100%;
-	margin: 0 20px 50px 20px;
-
+.row  section{
+	height: 700px;
+	font-size: 1.1em;
+	background-color: #c1c0c0;
+	padding: 15px;
+	margin-bottom: 30px;
 }
 
 h1 {
@@ -27,11 +29,7 @@ h3 {
 }
 
 
-#main-content section {
-	font-size: 1.1em;
-	background-color: #c1c0c0;
-	height: 1000px;
-}
+
 
 
 /* for extra small devices */
@@ -53,5 +51,14 @@ h3 {
 
 	#main-menu li:hover {
 		background-color: #dcdcdc;
+	}
+}
+
+/* --------------large devices------------*/
+
+@media(min-width: 1200px){
+	.row  section {
+		height: 1200px;
+		overflow: auto;
 	}
 }
