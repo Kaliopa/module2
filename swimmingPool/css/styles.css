@@ -1,7 +1,9 @@
 
 /*main styles for header*/
 body{
-	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;;
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+	font-size: 1em;	
+	box-sizing: border-box;
 }
 
 #big-pic {
@@ -13,21 +15,65 @@ body{
 
 }
 
-/*--------styles for the menu-----------------*/
+/*--------styles for header-----------------*/
 #navbar {
 	width: 100%;
 	border-radius: 0;
 	border-width: 0;
+	position: relative;
 }
+/* --- brand styles ------*/
+h1 {
+	position: absolute;
+	top: 35%;
+	left: 10%;
+	text-shadow: 2px 2px 2px #671715;				
+}
+
+#navbar .navbar-brand {
+	color: #fff;	
+	font-size: .7em;
+}
+
+.navbar-brand span:nth-child(1){
+	font-size: .6em;
+	width: 10px;
+}
+.navbar-brand span:nth-child(2){
+	font-size: .8em;
+	width: 14px;
+}
+
+/* ----- for contacts in header ----- */
+
+.contacts-header {
+	position: absolute;
+	width: 255px;
+	top: 55%;
+	left: 65%;
+	color: #ECECEA;
+	font-size: 1.9em;
+	text-shadow: 1px 1px 1px #091A73;	
+}
+
+.contacts-header a {
+	color: #ECECEA;
+	text-decoration: none;	
+}
+
+/* ----- for navigation bar ------ */
 #navbar,
 #navbar .dropdown-menu {
 	background-color: #558C89;	
 	
 }
+#navbar .container, #navbar .container .collapse {
+	padding: 0px;
+} 
 
 #navbar .container .collapse a{
 	color: #ECECEA;
-	font-size: 1.2em;
+	font-size: 1.6em;
 }
 
 #navbar .active a, 
@@ -51,22 +97,73 @@ body{
 
 /* ------ Home page main content ------*/
 
-#main-content {
-	border: 1px solid grey;
+#main-content {	
+	margin-top: -21px;
+	box-shadow: 1px 1px 10px #E6E6E6;
+	padding: 10px 15px 30px 25px;
+	font-size: 1.6em;
+}
+#main-content article {
+	margin: 20px 0;
+}
+#main-content img {	
+	padding:5px;
+	margin: 15px 0;	
 }
 
 /*--------- media queries --------------*/
 
 /* ----- large devices ----- */
+@media (min-width: 1100px){
+	h1 {
+		left: 25%;
+	}
+}
+
+/* ----- medium devices ----- */
 @media (min-width: 768px) {
 /*for menu*/
 	#navbar .navbar-nav li {
 		border-right: 1px solid #609A97;
 	}
+
+/*brand*/
+	#navbar .navbar-brand {		
+		font-size: 1em;
+		font-weight: 700;
+	}
+	h1 {
+		top: 48%;
+	}
+	
+
 }
 
-/* ----- medium and small devices ----- */
-@media (max-width: 767px){
+/* ----- small devices ----- */
+@media (max-width: 767px) {
+/*brand*/
+h1 {
+	background-color:rgba(217, 133, 59, 0.75);
+	top: 20%;
+	left:0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 15px;
+}
+h1 a.navbar-brand {
+	width: 100%;
+}
+#navbar .navbar-brand {		
+		font-size: .9em;
+		font-weight: 600;
+	}
+
+/* header-contacts*/
+.contacts-header {
+	left: 3%;
+}
+
 /*for menu*/
 	 #navbar ul.navbar-nav, #navbar ul.dropdown-menu {
 		text-align: center;
@@ -97,5 +194,19 @@ body{
 	}
 	#navbar .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
 		background-color: #92BEBC;
+	}
+
+
+}
+
+/* ----- extra small devices ----- */
+@media (max-width: 360px){
+	#navbar .navbar-brand {		
+		font-size: .7em;
+		font-weight: 500;
+	}
+	.contacts-header {
+		width: 100%;
+		font-size: 2.2em;
 	}
 }
