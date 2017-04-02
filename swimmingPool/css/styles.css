@@ -22,6 +22,10 @@ body{
 	border-width: 0;
 	position: relative;
 }
+
+#navbar .dropdown-menu {
+		font-size: 1em;
+	}
 /* --- brand styles ------*/
 h1 {
 	position: absolute;
@@ -94,77 +98,8 @@ h1 {
 	background-color: #5D9794;
 	color:#225754;
 }
-
-/* ------ Home page main content ------*/
-
-#main-content {	
-	margin-top: -21px;
-	box-shadow: 1px 1px 10px #E6E6E6;
-	padding: 10px 15px 30px 25px;
-	font-size: 1.6em;
-}
-#main-content article {
-	margin: 20px 0;
-}
-#main-content img {	
-	padding:5px;
-	margin: 15px 0;	
-}
-
-/*--------- media queries --------------*/
-
-/* ----- large devices ----- */
-@media (min-width: 1100px){
-	h1 {
-		left: 25%;
-	}
-}
-
-/* ----- medium devices ----- */
-@media (min-width: 768px) {
-/*for menu*/
-	#navbar .navbar-nav li {
-		border-right: 1px solid #609A97;
-	}
-
-/*brand*/
-	#navbar .navbar-brand {		
-		font-size: 1em;
-		font-weight: 700;
-	}
-	h1 {
-		top: 48%;
-	}
+/* navigation bar dropdown */
 	
-
-}
-
-/* ----- small devices ----- */
-@media (max-width: 767px) {
-/*brand*/
-h1 {
-	background-color:rgba(217, 133, 59, 0.75);
-	top: 20%;
-	left:0;
-	display: block;
-	width: 100%;
-	text-align: center;
-	padding-bottom: 15px;
-}
-h1 a.navbar-brand {
-	width: 100%;
-}
-#navbar .navbar-brand {		
-		font-size: .9em;
-		font-weight: 600;
-	}
-
-/* header-contacts*/
-.contacts-header {
-	left: 3%;
-}
-
-/*for menu*/
 	 #navbar ul.navbar-nav, #navbar ul.dropdown-menu {
 		text-align: center;
 	}
@@ -196,11 +131,215 @@ h1 a.navbar-brand {
 		background-color: #92BEBC;
 	}
 
+/* ------ Home page main content ------*/
+
+#main-content {	
+	margin-top: -21px;
+	box-shadow: 1px 1px 10px #E6E6E6;
+	padding: 10px 15px 30px 25px;
+	font-size: 1.6em;
+}
+#main-content article {
+	margin: 20px 0;
+}
+
+/*--- images for xs ---*/
+#main-content .home-img {
+	width:98%;
+	height:185px;		
+	margin: 5px auto;
 
 }
 
+#main-content .home-img.pic1 {
+	background: url(../img/home-xs.jpg) no-repeat;
+}
+
+#main-content .home-img.pic2 {
+	background: url(../img/home1-xs.jpg) no-repeat;
+}
+#main-content .home-img.pic3 {
+	background: url(../img/home2-xs.jpg) no-repeat;
+}
+#main-content .home-img.pic4 {
+	background: url(../img/home3-xs.jpg) no-repeat;
+}
+
+/* ---------- styles for footer -----------*/
+#footer {
+	background-color: #2A2A2A;
+	position: relative;
+
+}
+#footer .contacts-footer, #footer .social, #footer .working-time{
+	display: inline-block;
+	font-size: 1.5em;
+	color: #BCBCBC;
+	padding: 25px 15px;
+}
+
+.contacts-footer a {
+	color: #BCBCBC;
+	text-decoration: none;	
+}
+.social a {
+	color:#BCBCBC;
+	padding: 5px;
+	font-size: 1.9em;
+}
+
+.working-time span:first-child, .social span:first-child, .contacts-footer>span{
+	font-weight: bolder;
+	font-style: italic;
+}
+
+/*--------- media queries --------------*/
+
+/* ----- large devices ----- */
+@media (min-width: 1200px){
+	h1 {
+		left: 25%;
+	}
+/*for menu*/
+	#navbar .navbar-nav li {
+		border-right: 1px solid #609A97;
+	}
+	
+/*brand*/
+	#navbar .navbar-brand {		
+		font-size: 1em;
+		font-weight: 700;
+	}
+	h1 {
+		top: 48%;
+	}
+/* footer*/
+	#footer .working-time {
+		text-align: center;
+	}
+/*--- images on Home page---*/
+	#main-content .home-img {
+		width:24%;
+		margin: 10px 5px;		
+	}
+}
+
+/* ----- medium devices ----- */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+/*for menu*/
+	#navbar .navbar-nav li {
+		border-right: 1px solid #609A97;
+	}
+
+/*brand*/
+	#navbar .navbar-brand {		
+		font-size: 1em;
+		font-weight: 700;
+	}
+	h1 {
+		top: 48%;
+	}
+/* footer*/
+	#footer .working-time {
+		text-align: right;
+	}
+	#footer .social {		
+		border-top: 1px solid grey;
+	}
+
+/*--- images on Home page---*/
+	#main-content .home-img.pic1, #main-content .home-img.pic2, #main-content .home-img.pic3, #main-content .home-img.pic4 {
+		width:32%;
+		margin: 5px 5px;
+		background-position: center;		
+	}	
+
+}
+
+/* ----- small devices ----- */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+/*for menu*/
+	#navbar .navbar-nav li {
+		border-right: 1px solid #609A97;
+	}
+
+/*brand*/
+	h1 {
+		background-color:rgba(217, 133, 59, 0.75);
+		top: 40px;
+		left:0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 15px;
+	}
+	h1 a.navbar-brand {
+		width: 100%;	
+	}
+	#navbar .navbar-brand {		
+			font-size: .9em;
+			font-weight: 600;
+		}
+/* header-contacts*/
+	#navbar .contacts-header {
+		top: 180px;
+		left: 5%;
+	}
+/* footer*/
+	#footer .contacts-footer {
+		text-align: center;		
+	}
+	#footer .working-time {
+		text-align: center;
+		border-top: 1px solid grey;
+	}
+	#footer .social {		
+		border-top: 1px solid grey;
+	}
+
+/*--- sm images on Home page---*/
+	#main-content .home-img {
+		width:48%;		
+		margin: 5px 5px;				
+	}
+	#main-content .home-img.pic1 {
+		background: url(../img/home-md.jpg) no-repeat;
+		background-position: bottom;		
+	}
+	#main-content .home-img.pic2 {
+		background: url(../img/home1-md.jpg) no-repeat;
+		background-position: center;
+	}
+	#main-content .home-img.pic3 {
+		background: url(../img/home2-md.jpg) no-repeat;
+		background-position: center;
+	}
+	#main-content .home-img.pic4 {
+		background: url(../img/home3-md.jpg) no-repeat;
+		background-position: center;
+	}	
+}
+
 /* ----- extra small devices ----- */
-@media (max-width: 360px){
+@media screen and (max-width: 768px){
+/*brand*/
+	h1 {
+		background-color:rgba(217, 133, 59, 0.75);
+		top: 40px;
+		left:0;
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 15px;
+	}
+	h1 a.navbar-brand {
+		width: 100%;	
+	}
+	#navbar .navbar-brand {		
+			font-size: .9em;
+			font-weight: 600;
+		}
+/* navigation bar*/
 	#navbar .navbar-brand {		
 		font-size: .7em;
 		font-weight: 500;
@@ -208,5 +347,38 @@ h1 a.navbar-brand {
 	.contacts-header {
 		width: 100%;
 		font-size: 2.2em;
+	}
+/* header-contacts*/
+	#navbar .contacts-header {
+		top: 180px;
+		left: 15px;
+		font-size: 2em;
+	}
+
+/* footer*/
+	#footer .contacts-footer {
+		text-align: center;
+	}
+	#footer .working-time {
+		text-align: center;
+		border-top: 1px solid grey;
+	}
+	#footer .social {		
+		border-top: 1px solid grey;
+	}
+/*--- sm images on Home page---*/
+	#main-content .home-img {
+		width:48%;		
+		margin: 5px 5px;				
+	}
+}
+
+/* ----- super extra small devices ----- */
+@media screen and (max-width: 557px){
+	/*--- sm images on Home page---*/
+	#main-content .home-img.pic1, #main-content .home-img.pic2, #main-content .home-img.pic3, #main-content .home-img.pic4 {
+		width:98%;	
+		margin: 5px 0;
+		background-position: center;				
 	}
 }
