@@ -12,7 +12,13 @@ body{
 	background:url(../img/swimming-pool-.jpg) no-repeat;
 	background-position: center;
 	background-size: cover;
+}
 
+#main-content, #training, #sauna, #preises, #contacts {	
+	margin-top: -21px;
+	box-shadow: 1px 1px 10px #E6E6E6;
+	padding: 10px 15px 30px 25px;
+	font-size: 1.6em;
 }
 
 /*------------------- styles for header---------------*/
@@ -80,9 +86,9 @@ h1 {
 	font-size: 1.6em;
 }
 
-#navbar .active a, 
-#navbar .active a:focus, 
-#navbar .active a:hover {
+#navbar .active>a, 
+#navbar .active>a:focus, 
+#navbar .active>a:hover {
 	background-color: #447A77;	
 }
 
@@ -159,12 +165,6 @@ h1 {
 }
 /*   --------- Home page main content-----------------------------*/
 
-#main-content, #training, #sauna {	
-	margin-top: -21px;
-	box-shadow: 1px 1px 10px #E6E6E6;
-	padding: 10px 15px 30px 25px;
-	font-size: 1.6em;
-}
 #main-content article {
 	margin: 20px 0;
 }
@@ -189,13 +189,13 @@ h1 {
 	background: url(../img/home3-xs.jpg) no-repeat;
 }
 
-/*---------------------------- blank page -----------------------*/
+/*---------------------------- blank.html page -----------------------*/
 #blankPage div {
 	width: 300px;
 	margin: 20% auto;
 }
 
-/* ---------------------------- training page--------------------*/
+/* ---------------------------- training.html page--------------------*/
 
 #training h2 {
 	background-color: #D9853B;
@@ -243,12 +243,15 @@ h1 {
 }
 
 /*-----------------------Sauna.html------------------------------*/
+/*#sauna {
+	background-color: rgba(249, 170, 101, 0.23);
+}*/
 #sauna h2 {
 	background-color: #D9853B;	
 	padding: 10px 0 10px 30px;
-	border-radius: 0 15px 0 15px;
+	border-radius: 15px 15px 0 0px;
 	font-size: 1.6em;
-	color: white;
+	color: white;	
 }
 #sauna .img {	
 	width: 100%;
@@ -256,6 +259,7 @@ h1 {
 	max-width: 500px;
 	box-shadow: 3px 3px 10px grey;
 	margin: 25px auto;
+	border: 2px solid #D9853B;
 }
 #sauna .left .img {
 	background: url(../img/sauna-500.jpg) no-repeat;
@@ -266,8 +270,54 @@ h1 {
 	background-position: center;
 }
 #sauna span {
-	margin: 35px auto;
+	margin: 20px auto;
+	padding-top: 15px;
+	border-top: 1px solid #D9853B;
 }
+#sauna article {
+	padding: 15px 35px;
+}
+
+/*--------------------------preis.html page----------------------*/
+#preises h3 {
+	font-size: 1.1em;
+	background-color: #74AFAD;
+	padding:15px;
+	color: white;
+}
+#preises .row div {
+	padding: 20px 20px;
+	margin-top: -10px;
+	text-align: center;
+	background-color: #C9E8E7;
+	height: 70%;
+
+}
+#preises h2 {
+	display: none;
+}
+/* ----------------- contacts.html -----------------------------*/
+#contacts section {
+	padding: 15px;
+	text-align: center;
+}
+#contacts .row {
+	padding-right: 10px;
+}
+#contacts section:first-child {
+	background-color: #B4DAD9;
+}
+#contacts section:nth-child(2) {
+	background-color: #C9E8E7;
+}
+#contacts section:nth-child(3){	
+	padding: 0;
+}
+#contacts iframe {
+	padding: 0;
+}
+
+
 
 /*-----------------------------------------------------*/
 /*----------------- media queries -------------------------------*/
@@ -303,6 +353,10 @@ h1 {
 	#tr-pic1 {		
 		width:23%;
 		margin: -10px 0 0 0;
+	}
+/* lg -------- preise.html ------------------*/
+	#preises section {
+		height: 210px;
 	}
 }
 
@@ -341,10 +395,13 @@ h1 {
 		margin: 10px auto 10px;		
 		
 	}
-
+/* md -------- preis.html ---------------*/
+	#preises section {
+		height: 210px;
+	}
 }
 
-/* sm ----- small devices ----- */
+/* sm ----- small devices --------------------- */
 @media screen and (min-width: 769px) and (max-width: 992px) {
 /* sm - for menu*/
 	#navbar .navbar-nav li {
